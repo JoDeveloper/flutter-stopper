@@ -141,7 +141,7 @@ class StopperState extends State<Stopper> with SingleTickerProviderStateMixin {
     _tween.end = to;
     _animationController.value = 0;
     if (_scrollController!.offset < 0) _scrollController!.animateTo(0, duration: const Duration(milliseconds: 200), curve: Curves.linear);
-    _animationController.fling().then((_) {
+    _animationController.fling(velocity: velocity ?? 1.0).then((_) {
       _currentStop = _targetStop;
       setState(() {
         _scrollPhysics = _getScrollPhysicsForStop(_currentStop);
