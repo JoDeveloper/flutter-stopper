@@ -1,8 +1,8 @@
 name: stopper
 description: A bottom sheet that can be expanded to one of the pre-defined stop heights by dragging.
-version: 1.0.1
-author: Alexander Ryzhov <aryzhov07@gmail.com>
-homepage: https://github.com/aryzhov/flutter-stopper
+version: 1.0.2
+
+homepage: https://github.com/JoDeveloper/flutter-stopper
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
