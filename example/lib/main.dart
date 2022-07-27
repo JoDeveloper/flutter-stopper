@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stopper/stopper.dart';
+import 'package:flutter_stopper/stopper.dart';
 
 void main() => runApp(const MyApp());
 

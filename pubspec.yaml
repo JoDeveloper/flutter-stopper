@@ -1,4 +1,4 @@
-name: stopper
+name: flutter_stopper
 description: A bottom sheet that can be expanded to one of the pre-defined stop heights by dragging.
 version: 1.0.2
 

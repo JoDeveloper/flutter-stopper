@@ -1,4 +1,4 @@
-library stopper;
+library flutter_stopper;
 
 import 'dart:math';
 

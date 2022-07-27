@@ -13,7 +13,7 @@ dependencies:
   cupertino_icons: ^0.1.2
 
 dev_dependencies:
-  stopper:
+  flutter_stopper:
     path: ../
 
 
