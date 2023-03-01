@@ -262,7 +262,7 @@ PersistentBottomSheetController showStopper(
 
 /// Shows the Stopper modal bottom sheet.
 /// Returns a [Future] that can be used
-Future showModalStopper({
+Future<T?> showModalStopper<T>({
   /// The key of the [Stopper] widget
   Key? key,
 
@@ -291,12 +291,10 @@ Future showModalStopper({
   /// Required for modal bottomSheet
   bool isScrollController = true,
 }) {
-  Future cont;
-
-  cont = showModalBottomSheet(
+  return showModalBottomSheet<T>(
     backgroundColor: Theme.of(context).backgroundColor,
     shape: shape,
-    isScrollControlled: true,
+    isScrollControlled: isScrollController,
     context: context,
     builder: (context) {
       return Stopper(
@@ -306,11 +304,12 @@ Future showModalStopper({
         stops: stops,
         initialStop: initialStop,
         dragThreshold: dragThreshold,
-//        onClose: userCanClose ? () {
-//          cont.close();
-//        }: null,
+        onClose: userCanClose
+            ? () {
+                Navigator.of(context).maybePop();
+              }
+            : null,
       );
     },
   );
-  return cont;
 }
